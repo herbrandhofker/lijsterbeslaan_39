@@ -1,0 +1,46 @@
+{
+    "title": "There are several popular docker images for Apache Kafka. For each one the following instructions apply",
+    "paragraphs": [
+      
+        {
+            "text": "From now on you can start Apache Kafka",
+            "code": {
+                "script": "docker-compose -f docker-compose.yml up"
+            },
+            "conclusion": "with Ctrl-C you can stop Apache Kafka"
+        },
+        {
+            "text": "Or start Apache Kafka in detached mode (preferred):",
+            "code": {
+                "script": "docker-compose -f docker-compose.yml up -d"
+            }
+        },
+        {
+            "text": "And stop Apache Kafka with: ",
+            "code": {
+                "script": "docker-compose  -f docker-compose.yml stop"
+            }
+        },
+        {
+            "text": "And start Apache Kafka again, but note that all our data is gone!\nIf you want to save data, the docker compose file should be extended with volume statements.",
+            "code": {
+                "script": "docker-compose  -f docker-compose.yml start"
+            }
+        },
+        {
+            "text": "Also you should be able to use Kafka by logging in into the running Kafka Image and do basic operations. See last 5 minutes Bitnami video. ",
+            "code": {
+                "script": "docker exec -it kafka /bin/sh"
+            }
+        },
+       
+        {
+            "text": "The code for wurstmeister",
+            "code": {
+                "language": "yml",
+                "path": "./data/les01/docker-compose-wurstmeister.yml"
+            }
+            
+        }
+    ]
+}
