@@ -13,13 +13,16 @@ module.exports = {
     watchFiles: ['src/**'],
   },
   plugins: [
-     new HtmlWebpackPlugin({title : 'Apache Kafka Course'}),
+    new HtmlWebpackPlugin({
+     title: 'Lijsterbeslaan 39 Hilversum',
+     template: "./src/index.html"
+    }),
     new CopyPlugin({
-        patterns: [
-            { from: './src/data', to: './data' }
-        ],
-      }),
-],
+      patterns: [
+        { from: './src/images', to: './images' },
+      ],
+  })
+  ],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
